@@ -14,7 +14,7 @@ const measurementTo = process.env.MEASUREMENT_TO;
 const downsampledRetentionPolicy = process.env.DOWNSAMPLED_RETENTION_POLICY;
 const downsampledField = process.env.DOWNSAMPLED_FIELD;
 const downsampledTag = process.env.DOWNSAMPLED_TAG;
-const downsampleIntervalHours = "2 hours";
+const downsampleIntervalHours = process.env.DOWNSAMPLED_INTERVAL_HOURS; // e.g. "2 hours"
 
 // Initialise InfluxDB Client 
 const client = new InfluxDBClient({ host, token, writeOptions: { precision: 'ms' } });
